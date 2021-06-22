@@ -1,102 +1,88 @@
-# Program to multiply two matrices 
+import numpy as np
 
-# 3x3 matrix
-X = [[1,9,3],
-    [9 ,5,6],
-    [7 ,2,9]]
-# 3x3 matrix
-Y = [[5,8,1],
-    [6,8,3],
-    [3,5,9]]
-# result is 3x3
-result = [[0,0,0],
-         [0,0,0],
-         [0,0,0]]
+A=[]
+n=int(input("Enter N for N x N matrix: "))         
+print("Enter the element ::>")
+for i in range(n): 
+   row=[]                                      
+   for j in range(n): 
+      row.append(int(input()))           
+      A.append(row)                      
+print(A)
 
-for i in range(len(X)):
+
+print("Display Array In Matrix Form")
+for i in range(n):
+   for j in range(n):
+      print(A[i][j], end=" ")
+   print()                                        
+B=[]
+n=int(input("Enter N for N x N matrix : "))          
+
+print("Enter the element ::>")
+for i in range (n): 
+   row=[]                                     
+   for j in range(n): 
+      row.append(int(input()))           
+      B.append(row)                       
+print(B)
+
+print("Display Array In Matrix Form")
+      
+result = []
   
-   for j in range(len(Y[0])):
-    
-       for k in range(len(Y)):
-           result[i][j] += X[i][k] * Y[k][j]
 
-for res in result:
-   print(res)
+for i in range(len(A)): 
+   for j in range(len(B[0])): 
+      for k in range(len(B)): 
+         result[i][j] += A[i][k] * B[k][j] 
+print("The Resultant Matrix Is ::>")
+for r in result: 
+   print(r) 
 
-#Program to find the transpose of a matrix
-
-X = [[1,2],
-    [3 ,4],
-    [5 ,6]]
-
-result = [[0,0,0],
-         [0,0,0]]
-
+X = []
 
 for i in range(len(X)):
 
    for j in range(len(X[0])):
-       result[j][i] = X[i][j]
+       A[j][i] = X[i][j]
 
 for r in result:
-   print(r)
+   print("The transpose of first matrix is:")
+   print(X)
 
+Y = []
 
-# prove (AB)'=B'A'
-
-A = [[1,9,3],
-    [9 ,5,6],
-    [7 ,2,9]]
-# 3x3 matrix
-B = [[5,8,1],
-    [6,8,3],
-    [3,5,9]]
-# result is 3x3
-result1 = [[0,0,0],
-         [0,0,0],
-         [0,0,0]]
-
-for i in range(A)):
-  
-   for j in range(len(B[0])):
-    
-       for k in range(len(B)):
-           result1[i][j] += A[i][k] * B[k][j]
-
-result = [[0,0,0],
-         [0,0,0],
-         [0,0,0]]
-
-
-for i in range(len(A)):
+for i in range(len(X)):
 
    for j in range(len(X[0])):
-       result2[j][i] = A[i][j]
+       A[j][i] = Y[i][j]
 
-result3 = [[0,0,0],
-         [0,0,0],
-         [0,0,0]]
+for r in result:
+   print("The transpose of second matrix is:")
+   print(Y)
 
-
-for i in range(len(B)):
-
-   for j in range(len(B[0])):
-       result3[j][i] = B[i][j]
-
-for i in range(len(result2)):
-  
-   for j in range(len(result3[0])):
-    
-       for k in range(len(result3)):
-           result4[i][j] += result2[i][k] * result3[k][j]
-
-if(result4[i][j]==result1[i][j])
-    print("True")
-
-else
-    print("False")
+Z = []
 
 
+for i in range(len(A)): 
+   for j in range(len(B[0])): 
+      for k in range(len(B)): 
+        Z[i][j] += X[i][k] * Y[k][j] 
+print("The Resultant Matrix Is ::>")
+for r in result: 
+   print(r) 
 
-
-
+for i in range(len(Z)): 
+   for j in range(len(result[0])): 
+      for k in range(len(result)): 
+        if(np.array_equal(Z,result))
+        {
+             print("Verified")
+        }
+           
+        else
+        { 
+            print("False")
+        }
+          
