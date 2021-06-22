@@ -1,34 +1,58 @@
-from Matrix_Operations import operations
+from matrix_operations import operations
 
-    #Problem1
-    A= [[1,9,3],
-    [9 ,5,6],
-    [7 ,2,9]]
-    
-    B = [[5,8,1],
-    [6,8,3],
-    [3,5,9]]
-
-    C= calc_inv(B)
-    for i in range(len(A)):
+R = int(input("Enter the number of rows:"))
+C = int(input("Enter the number of columns:"))
   
-    for j in range(len(C[0])):
-    
-       for k in range(len(Y)):
-           result[i][j] += A[i][k] * C[k][j]
-
-         for res in result:
-   print(res)  
-
-        #Problem2
-
-D= calc_inv(A)
-    for i in range(len(D)):
+A = []
+print("Enter the entries rowwise:")
   
-    for j in range(len(C[0])):
-    
-       for k in range(len(Y)):
-           result[i][j] += D[i][k] * C[k][j]
+for i in range(R):          
+    a =[]
+    for j in range(C):     
+         a.append(int(input()))
+    A.append(a)
 
-         for res1 in result:
-   print(res1)  
+R = int(input("Enter the number of rows:"))
+C = int(input("Enter the number of columns:"))
+  
+B = []
+print("Enter the entries rowwise:")
+  
+for i in range(R):          
+    b =[]
+    for j in range(C):     
+         b.append(int(input()))
+    B.append(b)
+
+
+
+ adjoint = []
+ adjoint1 = []
+ inv = []
+ inv1 = []
+ res = []
+ res1 = []
+
+ 
+    operations.calc_adj(A, adjoint)
+    operations.calc_adj(B, adjoint1)
+    operations.calc_inv(A, inv)
+    operations.calc_inv(B, inv1)
+
+   for i in range(len(A)):
+  
+   for j in range(inv(B[0])):
+    
+       for k in range(inv(B)):
+           res[i][j] += A[i][k] * inv[k][j]
+    print(res)
+    
+    for i in range(len(inv)):
+  
+    for j in range(len(inv1[0])):
+    
+       for k in range(len(inv1)):
+           res1[i][j] += inv[i][k] * inv1[k][j]
+    print(res1)
+
+  
