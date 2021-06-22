@@ -65,9 +65,6 @@ for i in range(len(A)):
    for j in range(len(B[0])): 
       for k in range(len(B)): 
         Z[i][j] += X[i][k] * Y[k][j] 
-print("The Resultant Matrix Is ::>")
-for r in result: 
-   print(r) 
 
 for i in range(len(Z)): 
    for j in range(len(result[0])): 
